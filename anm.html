@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Web Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: plum;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: white;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        #login-form {
+            display: flex;
+            align-items: center;
+        }
+
+        #login-form input {
+            margin-right: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        #login-form button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .language-container {
+            display: flex;
+        }
+
+        .language-box {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            cursor: pointer;
+            background-color: white;
+            padding: 5px;
+            color: black;
+        }
+
+        .language-box:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+
+        .content1 {
+            padding: 20px;
+            background-color: plum;
+        }
+
+        .welcome-section {
+            text-align: center;
+            padding: 50px;
+            background-color: #f1f1f1;
+            }
+
+        .welcome-section h2 {
+            color: #333;
+            font-size: 2em;
+            }
+
+        .welcome-section img {
+            width: 500px;
+            height: 550px;
+        }
+
+        .container {
+            margin: 650px;
+            margin-top: auto;
+            margin-bottom: 25px;
+            width: 150px;
+            height: 50px;
+            background-color: black;
+            text-align: center;
+        }
+
+        .bg-1 {
+            background-color: white;
+            color: black;
+        }
+
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+            margin: 110px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+            text-align: center;
+            position: relative;
+        }
+
+        .column a {
+            display: block;
+            margin-top: 10px;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            color: black;
+            padding: 8px;
+            text-decoration: none;
+        }
+
+        .description-box {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .description-box h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .description-box p {
+            color: #333;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .team-description-box {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 35%;
+            padding: 12px, 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+            padding-left: 10px;
+        }
+
+        button {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f1f1f1;
+            color: black;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 20%;
+            padding-left: 50px;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .bg-2 {
+            text-align: center;
+            margin: 20px 0 12px 0;
+
+        }
+
+        .bg-3 {
+            background-color: plum;
+        }
+
+        img {
+            padding-left: 100px;
+        }
+
+        #contact {
+            text-align: center;
+        }
+
+        .team-member {
+            text-align: center;
+            flex: 0 1 30%;
+            margin: 10px;
+        }
+
+        .team-member img {
+            width: 200%;
+            max-width: 200px;
+        }
+
+        .team-member p {
+            margin-top: 10px;
+        }
+
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="logo.PNG" alt="Your Logo" width="10%" height="10%" class="img-circle, img-responsive">
+        </div>
+        <nav>
+            <a href="#my-page">My Page</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="language-container">
+            <div class="language-box" onclick="selectLanguage('Eng')">Eng</div>
+            <div class="language-box" onclick="selectLanguage('한국어')">한국어</div>
+        </div>
+    </header>
+
+    <div class="welcome-section">
+        <div>
+            <h2 style="color: rgb(142, 76, 187);">Welcome to ANM store</h2>
+        </div>
+        <div>
+            <img src="image1.jpg" alt="Welcome Image">
+        </div>
+    </div>
+    <div id="my-page" class="content1">
+        <div class="container-fluid">
+            <div class="container-fluid bg-2 text">
+                <h2 style="color: rgb(202, 59, 178);">My page</h2>
+                <form action="login.html">
+                    <label>Username</label>
+                    <input type="text" placeholder="anmstore" /><br />
+                    <label>Password</label>
+                    <input type="text" placeholder="anmstore123" /><br />
+                    <input type="checkbox">Remember me
+                    <button>Log in</button><br />
+                    <label>
+                        <p><a href="Forget Password">Forgot Password</p>
+                    </label>
+                    <label>
+                        <p>No account? <a href="signup">Sign up</a></p>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="shop">
+        <div class="container-fluid bg-1 text-center">
+            <h2 style="color: rgb(202, 59, 178);">Shop</h2>
+            <h1 style="text-align: center;">Featured Products</h1>
+            <div class="row">
+                <div class="column">
+                    <img src="top.jpg" alt="top" style="width:90%">
+                    <a href="#shop-now">Shop Now</a>
+                </div>
+                <div class="column">
+                    <img src="bottom.jpg" alt="bottom" style="width:90%">
+                    <a href="#shop-now">Shop Now</a>
+                </div>
+                <div class="column">
+                    <img src="dress.jpg" alt="dress" style="width:90%">
+                    <a href="#shop-now">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="content1">
+        <div class="row">
+            <div class="column" style="flex: 50%;">
+                <h2 style="color: rgb(202, 59, 178);">About us</h2>
+                <div class="description-box">
+                    <p>여성 의류 비즈니스를 시작한 계기는 여성들이 입었을 때 편안하고 몸을 감싸주는 느낌이 중요하다는 믿음에서 출발했습니다. 저희는 항상 국내 상품으로 여성 고객들의 마음을
+                        사로잡을 것이며, 앞으로 내년 초에는 온라인 뿐만 아니라 오프라인 매장에서도 만날 수 있도록 다양한 계획을 준비 중입니다. 여성 의류는 12월에 갑작스럽게 찾아온 추운 날씨에 맞춰 지속적으로
+                        겨울 신상품을 준비하고 있습니다. 겨울 시즌에는 매일 편안하게 입을 수 있는 데일리 아이템부터, 특별한 날에 자신감을 더해줄 경량 패딩, 겨울 무스탕, 자켓 등 다양한 패션 아이템이
+                        준비되어 있습니다. 다양한 사이즈와 합리적인 가격으로 연령대 구분 없이 여성 의류를 판매할 예정입니다.</p>
+                </div>
+            </div>
+            <div class="column" style="flex: 50%; display: flex; align-items: center; justify-content: center;">
+                <img src="logo.PNG" alt="top" style="width: 50%">
+            </div>
+            <div id="about">
+                <div class="column" style="flex: 50%;">
+                    <h2 style="color: rgb(202, 59, 178);">Our Team</h2>
+                    <div class="team-description-box">
+                        <p>저희 팀은 총 5명으로 구성되었습니다. 각 팀원은 다음과 같습니다:</p>
+                        <ul>
+                            <li>Home - 아노진</li>
+                            <li>My Page - 아리온게렐</li>
+                            <li>Shop - 난서</li>
+                            <li>About - 아리온빌군</li>
+                            <li>Contact - 별</li>
+                        </ul>
+                        <p>의류 쇼핑몰을 선택한 이유는 팀원 모두 옷에 대한 관심이 많았고, 또한 온라인 쇼핑이 일상적이어서 해당 주제로 웹 페이지를 만들게 되었습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="content">
+        <h2 style="color: rgb(202, 59, 178);">Contact</h2>
+        <div class="row">
+            <div class="team-member" style="display: flex; flex-direction: column; align-items: center;">
+                <img src="아노진.jpg" alt="Image" style="width:100%">
+                <p>Phone number: 010-1234-5678</p>
+            </div>
+            <div class="team-member" style="display: flex; flex-direction: column; align-items: center;">
+                <img src="별.jpg" alt="Image" style="width:100%">
+                <p>Phone number: 010-1234-5678</p>
+            </div>
+            <div class="team-member" style="display: flex; flex-direction: column; align-items: center;">
+                <img src="아리온빌군.jpg" alt="Image" style="width:100%">
+                <p>Phone number: 010-1234-5678</p>
+            </div>
+            <div class="team-member" style="display: flex; flex-direction: column; align-items: center;">
+                <img src="난서.jpg" alt="Image" style="width:100%">
+                <p>Phone number: 010-1234-5678</p>
+            </div>
+            <div class="team-member" style="display: flex; flex-direction: column; align-items: center;">
+                <img src="아리온게렐.jpg" alt="Image" style="width:100%">
+                <p>Phone number: 010-1234-5678</p>
+            </div>
+            <footer class="container-fluid bg-4 text-center">
+                <p><a href="http://seoultech.ac.kr">서울과학기술대학교 경영정보시스템 </a><br> creared by TEAM2/ ANM</p>
+            </footer>
+        </div>
+    </div>
+    </div>
+
+
+    <script>
+        function login() {
+            alert('로그인되었습니다.');
+        }
+
+        function selectLanguage(language) {
+            alert('선택된 언어: ' + language);
+        }
+    </script>
+</body>
+
+</html>
